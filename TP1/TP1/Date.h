@@ -11,6 +11,11 @@ public:
 	Date();
 	~Date();
 
+	void SetAnnee(string);
+	void SetMois(string);
+	void SetJour(string);
+	
+
 private:
 	string jour, mois, annee;
 };

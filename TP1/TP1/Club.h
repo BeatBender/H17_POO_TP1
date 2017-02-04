@@ -17,7 +17,7 @@ public:
 	Club();
 	~Club();
 
-	//Get
+	/*//Get
 	string GetNom();
 	string GetHistoire();
 	string GetCouleur();
@@ -26,27 +26,27 @@ public:
 	vector<Joueur> GetEffectif();
 	Palmares GetPalmares();
 	Stade GetStade();
-	vector<Personne> GetStaff();
+	vector<Personne> GetStaff();*/
 
 	//Set
-	void SetNom(string);
-	void SetHistoire(string);
-	void SetCouleur(string);
-	void SetVille(string);
-	void SetDate(Date);
-	void SetEffectif(vector<Joueur>);
-	void SetPalmares(Palmares);
-	void SetStade(Stade);
-	void SetStaff(vector<Personne>);
+	void SetNom();
+	void SetHistoire();
+	void SetCouleur();
+	void SetVille();
+	void SetDate();
+	void SetEffectif();
+	void SetPalmares();
+	void SetStade();
+	void SetStaff();
 
 
 private:
 	string nom, histoire, couleur, ville;
 	Date annee_creation;
-	vector<Joueur> effectif;
+	vector<Joueur*> effectif;
 	Palmares palmares;
 	Stade stade;
-	vector<Personne> staff;
+	vector<Personne*> staff;
 
 };
 

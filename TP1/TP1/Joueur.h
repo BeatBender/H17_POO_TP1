@@ -14,9 +14,16 @@ public:
 	Joueur();
 	~Joueur();
 
+	void SetNom();
+	void SetPrenom();
+	void SetVille();
+	void SetTaille();
+	void SetPoids();
+	void SetParcours();
+
 private:
 	string nom, prenom, ville_naissance;
 	float taille, poids;
-	vector<Parcours> parcours;
+	Parcours parcours;
 };
 #endif

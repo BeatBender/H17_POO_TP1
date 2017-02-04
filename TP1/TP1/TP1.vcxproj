@@ -112,6 +112,7 @@
   <ItemGroup>
     <ClInclude Include="Club.h" />
     <ClInclude Include="Date.h" />
+    <ClInclude Include="Effectif.h" />
     <ClInclude Include="Entraineur.h" />
     <ClInclude Include="Joueur.h" />
     <ClInclude Include="LigueSoccer.h" />
@@ -125,6 +126,7 @@
   <ItemGroup>
     <ClCompile Include="Club.cpp" />
     <ClCompile Include="Date.cpp" />
+    <ClCompile Include="Effectif.cpp" />
     <ClCompile Include="Entraineur.cpp" />
     <ClCompile Include="Joueur.cpp" />
     <ClCompile Include="LigueSoccer.cpp" />
