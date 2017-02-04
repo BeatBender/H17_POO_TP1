@@ -8,6 +8,7 @@ public:
 	Screen();
 	~Screen();
 	void InitMainMenu();
+	void AfficherClubs();
 
 private:
 

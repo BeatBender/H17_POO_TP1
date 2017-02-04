@@ -1,8 +1,10 @@
+#include <string>
+#include <vector>
+
 #ifndef CLUB_H_
 #define CLUB_H_
 
-#include <string>
-#include <vector>
+
 #include "Date.h"
 #include "Joueur.h"
 #include "Palmares.h"
@@ -10,6 +12,8 @@
 #include "Personne.h"
 
 using namespace std;
+class Joueur;
+class Personne;
 
 class Club
 {

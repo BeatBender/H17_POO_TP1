@@ -74,19 +74,45 @@ void Club::SetEffectif()
 
 void Club::SetPalmares()
 {
-	string palmares;
-	this->palmares = palmares.GetPalmares();
+	string titre, annee, mois, jour;
+	cout << endl << "Entrez le titre gagne du club:" << endl;
+	cin >> titre;
+	this->palmares.GetPalmares() = titre;
+	cout << endl << "Entrez l'annee d'obtention du titre:" << endl;
+	cin >> annee;
+	this->palmares.GetDatePalmares().SetAnnee(annee);
+	cout << endl << "Entrez le mois d'obtention du titre:" << endl;
+	cin >> mois;
+	this->palmares.GetDatePalmares().SetMois(mois);
+	cout << endl << "Entrez le jour d'obtention du titre:" << endl;
+	cin >> jour;
+	this->palmares.GetDatePalmares().SetJour(jour);
+	cout << endl;
 }
 
 void Club::SetStade()
 {
-
+	this->stade.SetNom();
+	this->stade.SetCapacite();
+	this->stade.SetQualite();
+	this->stade.SetLieu();
 }
 
 void Club::SetStaff()
 {
-
+	bool cont = 1;
+	Personne* personne_courante = new Personne;
+	do
+	{
+		personne_courante->SetNom();
+		personne_courante->SetAge();
+		personne_courante->SetRole();
+		staff.push_back(personne_courante);
+		cout << endl << "Voulez-vous ajouter une autre personne au staff? 1) oui, 0) non :" << endl;
+	} while (cont == 1);
 }
+
+
 
 Club::Club()
 {

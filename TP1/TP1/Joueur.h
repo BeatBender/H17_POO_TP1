@@ -1,11 +1,12 @@
-#pragma once
 #ifndef JOUEUR_H_
 #define JOUEUR_H_
 
 #include <string>
 #include <vector>
 #include "Parcours.h"
+#include "Club.h"
 
+class Parcours;
 using namespace std;
 
 class Joueur
@@ -24,6 +25,6 @@ public:
 private:
 	string nom, prenom, ville_naissance;
 	float taille, poids;
-	Parcours parcours;
+	Parcours *parcours;
 };
 #endif

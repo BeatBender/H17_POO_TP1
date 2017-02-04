@@ -1,4 +1,4 @@
-#pragma once
+#include <string>
 #ifndef STADE_H_
 #define STADE_H_
 

@@ -60,7 +60,7 @@ void Joueur::SetPoids()
 
 void Joueur::SetParcours()
 {
-	Parcours parcours_joueur;
-	parcours_joueur.SetParcours();
+	Parcours* parcours_joueur = new Parcours;
+	parcours_joueur->SetParcours();
 	this->parcours = parcours_joueur;
 }

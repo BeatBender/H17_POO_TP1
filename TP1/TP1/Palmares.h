@@ -1,4 +1,4 @@
-#pragma once
+#include "Date.h"
 #ifndef PALMARES_H_
 #define PALMARES_H_
 
@@ -11,8 +11,8 @@ public:
 	~Palmares();
 
 	void SetPalmares();
-
 	string GetPalmares();
+	Date GetDatePalmares();
 
 private:
 	string titre;

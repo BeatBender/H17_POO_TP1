@@ -16,10 +16,10 @@ Parcours::~Parcours()
 void Parcours::SetParcours()
 {
 	string annee, mois, jour;
-	Club club_precedent_joueur;
+	Club* club_precedent_joueur = new Club;
 	Date date_club_precedent;
-	club_precedent_joueur.SetNom();
-	club_precedent_joueur.SetVille();
+	club_precedent_joueur->SetNom();
+	club_precedent_joueur->SetVille();
 	cout << "Entrez l'annee de l'entree dans le club precedent" << endl;
 	cin >> annee;
 	date_club_precedent.SetAnnee(annee);
