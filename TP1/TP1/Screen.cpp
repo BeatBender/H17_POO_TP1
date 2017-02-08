@@ -43,6 +43,41 @@ void Screen::SuppClub()
 	vecteur_club.erase(vecteur_club.begin() + choix);
 }
 
+void Screen::AfficherJoueursClub()
+{
+	int choix;
+	cout << "Choisissez un club pour voir ses joueurs:" << endl;
+	for (int i = 0; i < vecteur_club.size(); i++)
+	{
+		cout << i << ") " << vecteur_club.at(i)->GetNom() << endl;
+	}
+
+	if (vecteur_club.size() != NULL)
+	{
+		cin >> choix;
+		vecteur_club.at(choix)->AfficherJoueurs();
+	}
+	system("PAUSE");
+}
+
+void Screen::AjouterJoueur()
+{
+	int choix;
+	cout << "Choisissez un club pour y ajouter des joueurs:" << endl;
+	for (int i = 0; i < vecteur_club.size(); i++)
+	{
+		cout << i << ") " << vecteur_club.at(i)->GetNom() << endl;
+	}
+
+	if (vecteur_club.size() != NULL)
+	{
+		cin >> choix;
+		vecteur_club.at(choix)->SetEffectif();
+	}
+	
+	system("PAUSE");
+}
+
 void Screen::InitMainMenu()
 {
 	
@@ -54,6 +89,8 @@ void Screen::InitMainMenu()
 	cout << "1) Ajouter un club" << endl;
 	cout << "2) Afficher les clubs existant" << endl;
 	cout << "3) Supprimer un club" << endl;
+	cout << "4) Afficher les joueurs d'un club" << endl;
+	cout << "5) Ajouter un joueur a un club" << endl;
 
 	cin >> choix;
 	cout << endl << endl;
@@ -86,6 +123,16 @@ void Screen::InitMainMenu()
 
 	case 3:
 		SuppClub();
+		InitMainMenu();
+		break;
+
+	case 4:
+		AfficherJoueursClub();
+		InitMainMenu();
+		break;
+
+	case 5:
+		AjouterJoueur();
 		InitMainMenu();
 		break;
 

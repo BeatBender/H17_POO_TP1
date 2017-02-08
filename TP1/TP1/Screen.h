@@ -10,6 +10,8 @@ public:
 	void InitMainMenu();
 	void AfficherClubs();
 	void SuppClub();
+	void AfficherJoueursClub();
+	void AjouterJoueur();
 
 private:
 

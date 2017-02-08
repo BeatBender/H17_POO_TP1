@@ -121,6 +121,14 @@ string Club::GetNom()
 	return this->nom;
 }
 
+void Club::AfficherJoueurs()
+{
+	for (int i = 0; i < effectif.size(); i++)
+	{
+		cout << this->effectif[i]->GetNom() << ", " <<  this->effectif[i]->GetPrenom() << endl;
+	}
+}
+
 
 Club::Club()
 {

@@ -64,3 +64,13 @@ void Joueur::SetParcours()
 	parcours_joueur->SetParcours();
 	this->parcours = parcours_joueur;
 }
+
+string Joueur::GetNom()
+{
+	return this->nom;
+}
+
+string Joueur::GetPrenom()
+{
+	return this->prenom;
+}

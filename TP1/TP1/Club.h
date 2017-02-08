@@ -43,6 +43,8 @@ public:
 	void SetStade();
 	void SetStaff();
 
+	void AfficherJoueurs();
+
 
 private:
 	string nom, histoire, couleur, ville;

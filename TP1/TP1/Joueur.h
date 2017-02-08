@@ -22,6 +22,9 @@ public:
 	void SetPoids();
 	void SetParcours();
 
+	string GetNom();
+	string GetPrenom();
+
 private:
 	string nom, prenom, ville_naissance;
 	float taille, poids;
