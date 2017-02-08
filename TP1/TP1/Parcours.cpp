@@ -18,6 +18,7 @@ void Parcours::SetParcours()
 	string annee, mois, jour;
 	Club* club_precedent_joueur = new Club;
 	Date date_club_precedent;
+	cout << "Informations du club precedent auquel appartenait le joueur: " << endl;
 	club_precedent_joueur->SetNom();
 	club_precedent_joueur->SetVille();
 	cout << "Entrez l'annee de l'entree dans le club precedent" << endl;

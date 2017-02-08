@@ -21,7 +21,7 @@ public:
 	Club();
 	~Club();
 
-	/*//Get
+	//Get
 	string GetNom();
 	string GetHistoire();
 	string GetCouleur();
@@ -30,7 +30,7 @@ public:
 	vector<Joueur> GetEffectif();
 	Palmares GetPalmares();
 	Stade GetStade();
-	vector<Personne> GetStaff();*/
+	vector<Personne> GetStaff();
 
 	//Set
 	void SetNom();

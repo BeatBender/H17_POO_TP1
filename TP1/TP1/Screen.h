@@ -9,6 +9,7 @@ public:
 	~Screen();
 	void InitMainMenu();
 	void AfficherClubs();
+	void SuppClub();
 
 private:
 

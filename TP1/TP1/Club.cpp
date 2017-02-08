@@ -48,6 +48,7 @@ void Club::SetDate()
 	cout << endl << "Entrez le mois de création du club" << endl;
 	cin >> mois;
 	cout << endl << "Entrez le jour de création du club" << endl;
+	cin >> jour;
 	this->annee_creation.SetAnnee(annee);
 	this->annee_creation.SetMois(mois);
 	this->annee_creation.SetJour(jour);
@@ -58,6 +59,7 @@ void Club::SetEffectif()
 	bool cont;
 	do
 	{
+		cout << "Entrez les informations du joueur:" << endl;
 		Joueur* joueur_courant;
 		joueur_courant = new Joueur;
 		joueur_courant->SetNom();
@@ -104,14 +106,20 @@ void Club::SetStaff()
 	Personne* personne_courante = new Personne;
 	do
 	{
+		cout << "Informations sur le staff du club:" << endl;
 		personne_courante->SetNom();
 		personne_courante->SetAge();
 		personne_courante->SetRole();
 		staff.push_back(personne_courante);
 		cout << endl << "Voulez-vous ajouter une autre personne au staff? 1) oui, 0) non :" << endl;
+		cin >> cont;
 	} while (cont == 1);
 }
 
+string Club::GetNom()
+{
+	return this->nom;
+}
 
 
 Club::Club()
