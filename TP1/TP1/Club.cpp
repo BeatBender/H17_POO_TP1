@@ -1,7 +1,9 @@
 #include "Club.h"
 #include "Joueur.h"
+#include "Entraineur.h"
 #include <iostream>
 
+class Entraineur;
 using namespace std;
 
 void Club::SetNom()
@@ -77,19 +79,27 @@ void Club::SetEffectif()
 void Club::SetPalmares()
 {
 	string titre, annee, mois, jour;
-	cout << endl << "Entrez le titre gagne du club:" << endl;
-	cin >> titre;
-	this->palmares.GetPalmares() = titre;
-	cout << endl << "Entrez l'annee d'obtention du titre:" << endl;
-	cin >> annee;
-	this->palmares.GetDatePalmares().SetAnnee(annee);
-	cout << endl << "Entrez le mois d'obtention du titre:" << endl;
-	cin >> mois;
-	this->palmares.GetDatePalmares().SetMois(mois);
-	cout << endl << "Entrez le jour d'obtention du titre:" << endl;
-	cin >> jour;
-	this->palmares.GetDatePalmares().SetJour(jour);
-	cout << endl;
+	bool cont;
+
+	do {
+		cout << endl << "Entrez le titre gagne du club:" << endl;
+		cin >> titre;
+		this->palmares.GetTitre() = titre;
+		this->titres.push_back(titre);
+		cout << endl << "Entrez l'annee d'obtention du titre:" << endl;
+		cin >> annee;
+		this->palmares.GetDatePalmares().SetAnnee(annee);
+		cout << endl << "Entrez le mois d'obtention du titre:" << endl;
+		cin >> mois;
+		this->palmares.GetDatePalmares().SetMois(mois);
+		cout << endl << "Entrez le jour d'obtention du titre:" << endl;
+		cin >> jour;
+		this->palmares.GetDatePalmares().SetJour(jour);
+		cout << endl;
+
+		cout << endl << "Voulez-vous entrer un autre titre? 1) oui 0) non:" << endl;
+		cin >> cont;
+	} while (cont == 1);
 }
 
 void Club::SetStade()
@@ -110,6 +120,17 @@ void Club::SetStaff()
 		personne_courante->SetNom();
 		personne_courante->SetAge();
 		personne_courante->SetRole();
+
+		if (personne_courante->GetRole() == "entraineur" || personne_courante->GetRole() == "Entraineur")
+		{
+			Entraineur* entraineur_courant = new Entraineur;
+			entraineur_courant->SetNom();
+			entraineur_courant->SetPrenom();
+			entraineur_courant->SetLieuObtentionGrade();
+			entraineur_courant->SetTitres();
+			entraineurs.push_back(entraineur_courant);
+		}
+
 		staff.push_back(personne_courante);
 		cout << endl << "Voulez-vous ajouter une autre personne au staff? 1) oui, 0) non :" << endl;
 		cin >> cont;
@@ -119,6 +140,24 @@ void Club::SetStaff()
 string Club::GetNom()
 {
 	return this->nom;
+}
+
+Palmares Club::GetPalmares()
+{
+	Palmares* palmares_courant = new Palmares;
+
+	palmares_courant->GetTitre();
+	return *palmares_courant;
+}
+
+int Club::GetNbTitres()
+{
+	return this->titres.size();
+}
+
+vector<Entraineur*> Club::GetEntraineurs()
+{
+	return this->entraineurs;
 }
 
 void Club::AfficherJoueurs()

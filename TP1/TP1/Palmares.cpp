@@ -14,12 +14,24 @@ Palmares::~Palmares()
 
 }
 
-void Palmares::SetPalmares()
+void Palmares::SetTitre()
 {
-	
+	string annee, mois, jour;
+
+	cout << endl << "Entrez le titre du club: " << endl;
+	cin >> this->titre;
+	cout << endl << "Entrez l'annee de l'obtention du titre: " << endl;
+	cin >> annee;
+	this->date_obtention.SetAnnee(annee);
+	cout << endl << "Entrez le mois de l'obtention du titre: " << endl;
+	cin >> mois;
+	this->date_obtention.SetAnnee(mois);
+	cout << endl << "Entrez le jour de l'obtention du titre: " << endl;
+	cin >> jour;
+	this->date_obtention.SetAnnee(jour);
 }
 
-string Palmares::GetPalmares()
+string Palmares::GetTitre()
 {
 	return this->titre;
 }

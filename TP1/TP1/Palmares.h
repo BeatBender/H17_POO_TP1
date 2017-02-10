@@ -10,8 +10,8 @@ public:
 	Palmares();
 	~Palmares();
 
-	void SetPalmares();
-	string GetPalmares();
+	void SetTitre();
+	string GetTitre();
 	Date GetDatePalmares();
 
 private:

@@ -31,3 +31,8 @@ void Personne::SetAge()
 	cout << endl << "Entrez l'age de la personne:" << endl;
 	cin >> this->age;
 }
+
+string Personne::GetRole()
+{
+	return this->role;
+}

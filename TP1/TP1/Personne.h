@@ -4,6 +4,8 @@
 #include <string>
 #include "Club.h"
 
+using namespace std;
+
 class Personne
 {
 public:
@@ -13,6 +15,8 @@ public:
 	void SetNom();
 	void SetRole();
 	void SetAge();
+
+	string GetRole();
 
 private:
 	string nom, role;

@@ -10,10 +10,12 @@
 #include "Palmares.h"
 #include "Stade.h"
 #include "Personne.h"
+#include "Entraineur.h"
 
 using namespace std;
 class Joueur;
 class Personne;
+class Entraineur;
 
 class Club
 {
@@ -29,6 +31,8 @@ public:
 	Date GetDate();
 	vector<Joueur> GetEffectif();
 	Palmares GetPalmares();
+	int GetNbTitres();
+	vector<Entraineur*> GetEntraineurs();
 	Stade GetStade();
 	vector<Personne> GetStaff();
 
@@ -50,7 +54,9 @@ private:
 	string nom, histoire, couleur, ville;
 	Date annee_creation;
 	vector<Joueur*> effectif;
+	vector<Entraineur*> entraineurs;
 	Palmares palmares;
+	vector<string> titres;
 	Stade stade;
 	vector<Personne*> staff;
 

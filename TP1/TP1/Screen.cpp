@@ -18,6 +18,23 @@ Screen::~Screen()
 
 }
 
+void Screen::CreateClub()
+{
+	Club* club_courant;
+
+	club_courant = new Club;
+	club_courant->SetNom();
+	club_courant->SetHistoire();
+	club_courant->SetCouleur();
+	club_courant->SetVille();
+	club_courant->SetDate();
+	club_courant->SetEffectif();
+	club_courant->SetPalmares();
+	club_courant->SetStade();
+	club_courant->SetStaff();
+	vecteur_club.push_back(club_courant);
+}
+
 void Screen::AfficherClubs()
 {
 	cout << "Voici la liste des clubs de la ligue:" << endl;
@@ -74,15 +91,70 @@ void Screen::AjouterJoueur()
 		cin >> choix;
 		vecteur_club.at(choix)->SetEffectif();
 	}
-	
+
 	system("PAUSE");
+}
+
+void Screen::RechercheEntraineurTitre()
+{
+	int nbTitres = 0;
+	Entraineur* entraineurTitre = NULL;
+
+	for (int i = 0; i < vecteur_club.size(); i++)
+	{
+		for (int j = 0; j < vecteur_club.at(i)->GetEntraineurs().size(); j++)
+		{
+			if (vecteur_club.at(i)->GetEntraineurs().at(j)->GetNbTitres() > nbTitres)
+			{
+				nbTitres = vecteur_club.at(i)->GetEntraineurs().at(j)->GetNbTitres();
+				entraineurTitre = vecteur_club.at(i)->GetEntraineurs().at(j);
+			}
+
+		}
+
+	}
+	if (nbTitres == 0)
+	{
+		cout << endl << "Aucun entraineur n'a gagne de titre ou aucun entraineur enregistrer." << endl;
+		return;
+	}
+	else
+	{
+		cout << endl << "L'entraineur ayant le plus de titres est: " << entraineurTitre->GetNom() << " avec " << nbTitres << " titre(s)." << endl;
+		return;
+	}
+}
+
+void Screen::RechercheClubTitre()
+{
+	int nbTitres = 0;
+	Club* clubTitre = NULL;
+
+	for (int i = 0; i < vecteur_club.size(); i++)
+	{
+		if (sizeof(vecteur_club.at(i)->GetNbTitres()) > nbTitres)
+		{
+			nbTitres = sizeof(vecteur_club.at(i)->GetNbTitres());
+			clubTitre = vecteur_club.at(i);
+		}
+	}
+
+	if (nbTitres == 0)
+	{
+		cout << endl << "Il n'y a pas de club enregistrer ou aucun club n'a de titre" << endl;
+		return;
+	}
+	else
+	{
+		cout << endl << "Le club qui a le plus de titres est: " << clubTitre->GetNom() << " avec " << nbTitres << " titre(s)." << endl;
+		return;
+	}
 }
 
 void Screen::InitMainMenu()
 {
-	
+
 	int choix;
-	Club* club_courant;
 
 	cout << "--------------------- Menu Principal -----------------------" << endl;
 	cout << "0) Quitter l'application" << endl;
@@ -91,6 +163,8 @@ void Screen::InitMainMenu()
 	cout << "3) Supprimer un club" << endl;
 	cout << "4) Afficher les joueurs d'un club" << endl;
 	cout << "5) Ajouter un joueur a un club" << endl;
+	cout << "6) Trouver l'entraineur le plus titre de la ligue" << endl;
+	cout << "7) Trouver le club le plus titre de la ligue" << endl;
 
 	cin >> choix;
 	cout << endl << endl;
@@ -102,17 +176,7 @@ void Screen::InitMainMenu()
 		return;
 		break;
 	case 1:
-		club_courant = new Club;
-		club_courant->SetNom();
-		club_courant->SetHistoire();
-		club_courant->SetCouleur();
-		club_courant->SetVille();
-		club_courant->SetDate();
-		club_courant->SetEffectif();
-		club_courant->SetPalmares();
-		club_courant->SetStade();
-		club_courant->SetStaff();
-		vecteur_club.push_back(club_courant);
+		CreateClub();
 		InitMainMenu();
 		break;
 
@@ -133,6 +197,16 @@ void Screen::InitMainMenu()
 
 	case 5:
 		AjouterJoueur();
+		InitMainMenu();
+		break;
+
+	case 6:
+		RechercheEntraineurTitre();
+		InitMainMenu();
+		break;
+
+	case 7:
+		RechercheClubTitre();
 		InitMainMenu();
 		break;
 
