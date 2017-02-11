@@ -132,9 +132,9 @@ void Screen::RechercheClubTitre()
 
 	for (int i = 0; i < vecteur_club.size(); i++)
 	{
-		if (sizeof(vecteur_club.at(i)->GetNbTitres()) > nbTitres)
+		if (vecteur_club.at(i)->GetNbTitres() > nbTitres)
 		{
-			nbTitres = sizeof(vecteur_club.at(i)->GetNbTitres());
+			nbTitres = vecteur_club.at(i)->GetNbTitres();
 			clubTitre = vecteur_club.at(i);
 		}
 	}
