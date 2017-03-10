@@ -26,3 +26,18 @@ void Date::SetJour(string j)
 {
 	this->jour = j;
 }
+
+string Date::GetJour()
+{
+	return this->jour;
+}
+
+string Date::GetMois()
+{
+	return this->mois;
+}
+
+string Date::GetAnnee()
+{
+	return this->annee;
+}

@@ -10,3 +10,20 @@ Resultat::Resultat()
 Resultat::~Resultat()
 {
 }
+
+void Resultat::SetNbButsTotalLocal()
+{
+	int nb;
+	cout << "Entrez le nombre de buts total de l'equipe locale:" << endl;
+	cin >> nb;
+	this->nbButsTotalLocal = nb;
+	
+}
+
+void Resultat::SetNbButsTotalInvite()
+{
+	int nb;
+	cout << "Entrez le nombre de buts total de l'equipe invitee:" << endl;
+	cin >> nb;
+	this->nbButsTotalInvite = nb;
+}

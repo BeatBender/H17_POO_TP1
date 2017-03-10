@@ -1,12 +1,14 @@
 #include "Screen.h"
 #include "Club.h"
 #include <iostream>
+#include "Rencontre.h"
 
 using namespace std;
 
 class Club;
 
 vector<Club*> vecteur_club;
+vector<Rencontre*> vecteur_rencontres;
 
 Screen::Screen()
 {
@@ -151,6 +153,26 @@ void Screen::RechercheClubTitre()
 	}
 }
 
+void Screen::CreateGame()
+{
+	Rencontre *rencontre = new Rencontre;
+
+	rencontre->SetDate();
+	rencontre->SetClubLocal();
+	rencontre->SetClubInvite();
+	rencontre->SetResultat();
+	vecteur_rencontres.push_back(rencontre);
+}
+
+void Screen::AfficherCalendrier()
+{
+	cout << "Voici la liste des rencontres:" << endl;
+	for (int i = 0; i < vecteur_rencontres.size(); i++)
+	{
+		cout << vecteur_rencontres.at(i)->
+	}
+}
+
 void Screen::InitMainMenu()
 {
 
@@ -165,6 +187,8 @@ void Screen::InitMainMenu()
 	cout << "5) Ajouter un joueur a un club" << endl;
 	cout << "6) Trouver l'entraineur le plus titre de la ligue" << endl;
 	cout << "7) Trouver le club le plus titre de la ligue" << endl;
+	cout << "8) Creer une rencontre" << endl;
+	cout << "9) Afficher le calendrier des rencontres" << endl;
 
 	cin >> choix;
 	cout << endl << endl;
@@ -210,7 +234,19 @@ void Screen::InitMainMenu()
 		InitMainMenu();
 		break;
 
+	case 8:
+		CreateGame();
+		InitMainMenu();
+		break;
+
+	case 9:
+		AfficherCalendrier();
+		InitMainMenu();
+		break;
+
 	default:
+		cout << endl << "Commande invalide" << endl;
+		InitMainMenu();
 		break;
 	}
 

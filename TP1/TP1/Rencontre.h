@@ -11,6 +11,19 @@ public:
 	Rencontre();
 	~Rencontre();
 
+	void SetDate();
+	void SetClubLocal();
+	void SetClubInvite();
+	void SetResultat();
+
+	string GetJour();
+	string GetMois();
+	string GetAnnee();
+	string GetClubLocal();
+	string GetClubInvite();
+	int GetResultatLocal();
+	int GetResultatInvite();
+
 private:
 	Date dateRencontre;
 	Club clubLocal, clubInvite;

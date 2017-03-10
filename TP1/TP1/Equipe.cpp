@@ -12,3 +12,29 @@ Equipe::~Equipe()
 {
 
 }
+
+void Equipe::SetClub()
+{
+	this->club.SetNom();
+}
+
+void Equipe::SetNbJoueursTerrain()
+{
+	int number;
+	cout << "Entrez le nombre de joueurs presents sur le terrain en meme temps:" << endl;
+	cin >> number;
+	this->nbJoueursTerrain = number;
+}
+
+void Equipe::SetNbGardiens()
+{
+	int number;
+	cout << "Entrez le nombre de gardiens de l'équipe:" << endl;
+	cin >> number;
+	this->nbGardiens = number;
+}
+
+void Equipe::SetCapitaine()
+{
+	this->capitaine.SetNom();
+}

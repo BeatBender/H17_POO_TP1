@@ -14,6 +14,10 @@ public:
 	void SetAnnee(string);
 	void SetMois(string);
 	void SetJour(string);
+
+	string GetJour();
+	string GetMois();
+	string GetAnnee();
 	
 
 private:

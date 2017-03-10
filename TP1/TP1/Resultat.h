@@ -8,6 +8,9 @@ public:
 	Resultat();
 	~Resultat();
 
+	void SetNbButsTotalLocal();
+	void SetNbButsTotalInvite();
+
 private:
 	int nbButsTotalLocal, nbButsTotalInvite;
 };

@@ -12,9 +12,14 @@ public:
 	Match();
 	~Match();
 
+	void SetEquipeLocal();
+	void SetEquipeInvite();
+	void SetPeriode();
+	void SetResultat();
+
 private:
 	Equipe equipeLocal, equipeInvite;
-	list <Periode> periodes;
+	list <Periode*> periodes;
 	Resultat resultat;
 };
 

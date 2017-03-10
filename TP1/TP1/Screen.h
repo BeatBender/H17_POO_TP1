@@ -18,6 +18,8 @@ public:
 	void AjouterJoueur();
 	void RechercheEntraineurTitre();
 	void RechercheClubTitre();
+	void CreateGame();
+	void AfficherCalendrier();
 
 private:
 

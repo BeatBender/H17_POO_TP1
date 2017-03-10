@@ -1,38 +1,10 @@
-﻿  TitreGagne.cpp
-  Staff.cpp
-  Stade.cpp
-  Sportif.cpp
-  Screen.cpp
-d:\users\patrickbeatbender\documents\github\h17_poo_tp1\tp1\tp1\screen.cpp(41): warning C4018: '<' : incompatibilité signed/unsigned
-d:\users\patrickbeatbender\documents\github\h17_poo_tp1\tp1\tp1\screen.cpp(53): warning C4018: '<' : incompatibilité signed/unsigned
-d:\users\patrickbeatbender\documents\github\h17_poo_tp1\tp1\tp1\screen.cpp(67): warning C4018: '<' : incompatibilité signed/unsigned
-d:\users\patrickbeatbender\documents\github\h17_poo_tp1\tp1\tp1\screen.cpp(84): warning C4018: '<' : incompatibilité signed/unsigned
-d:\users\patrickbeatbender\documents\github\h17_poo_tp1\tp1\tp1\screen.cpp(103): warning C4018: '<' : incompatibilité signed/unsigned
+﻿  Screen.cpp
+d:\users\patrickbeatbender\documents\github\h17_poo_tp1\tp1\tp1\screen.cpp(43): warning C4018: '<' : incompatibilité signed/unsigned
+d:\users\patrickbeatbender\documents\github\h17_poo_tp1\tp1\tp1\screen.cpp(55): warning C4018: '<' : incompatibilité signed/unsigned
+d:\users\patrickbeatbender\documents\github\h17_poo_tp1\tp1\tp1\screen.cpp(69): warning C4018: '<' : incompatibilité signed/unsigned
+d:\users\patrickbeatbender\documents\github\h17_poo_tp1\tp1\tp1\screen.cpp(86): warning C4018: '<' : incompatibilité signed/unsigned
 d:\users\patrickbeatbender\documents\github\h17_poo_tp1\tp1\tp1\screen.cpp(105): warning C4018: '<' : incompatibilité signed/unsigned
-d:\users\patrickbeatbender\documents\github\h17_poo_tp1\tp1\tp1\screen.cpp(133): warning C4018: '<' : incompatibilité signed/unsigned
-  Rupture.cpp
-  Resultat.cpp
-  Rencontre.cpp
-  Reglement.cpp
-  Personne.cpp
-  Periode.cpp
-  Parcours.cpp
-  Palmares.cpp
-  Match.cpp
-  LigueSoccerApp.cpp
-  LigueSoccer.cpp
-  JoueurNA.cpp
-  JoueurA.cpp
-  Joueur.cpp
-  Equipe.cpp
-  Génération de code en cours...
-  Compilation en cours...
-  Entraineur.cpp
-  Effectif.cpp
-  Date.cpp
-  Contrat.cpp
-  Club.cpp
-d:\users\patrickbeatbender\documents\github\h17_poo_tp1\tp1\tp1\club.cpp(165): warning C4018: '<' : incompatibilité signed/unsigned
-  Génération de code en cours...
+d:\users\patrickbeatbender\documents\github\h17_poo_tp1\tp1\tp1\screen.cpp(107): warning C4018: '<' : incompatibilité signed/unsigned
+d:\users\patrickbeatbender\documents\github\h17_poo_tp1\tp1\tp1\screen.cpp(135): warning C4018: '<' : incompatibilité signed/unsigned
   TP1.vcxproj -> D:\Users\PatrickBeatBender\Documents\GitHub\H17_POO_TP1\TP1\Debug\TP1.exe
   TP1.vcxproj -> D:\Users\PatrickBeatBender\Documents\GitHub\H17_POO_TP1\TP1\Debug\TP1.pdb (Partial PDB)

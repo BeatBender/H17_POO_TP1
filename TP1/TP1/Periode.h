@@ -8,6 +8,10 @@ public:
 	Periode();
 	~Periode();
 
+	void SetDuree();
+	void SetNbButsLocal();
+	void SetNbButsInvite();
+
 private:
 	int duree, nbButsLocal, nbButsInvite;
 };

@@ -9,6 +9,11 @@ public:
 	Equipe();
 	~Equipe();
 
+	void SetClub();
+	void SetNbJoueursTerrain();
+	void SetNbGardiens();
+	void SetCapitaine();
+
 private:
 	Club club;
 	int nbJoueursTerrain, nbGardiens;
