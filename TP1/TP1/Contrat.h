@@ -4,6 +4,7 @@
 #include "Joueur.h"
 #include "Reglement.h"
 
+class Joueur;
 class Club;
 class Contrat
 {
@@ -18,9 +19,14 @@ public:
 	void SetDateEntree();
 	void SetDateContrat();
 
+	string GetJoueur();
+	string GetNouvClub();
+	string GetAncClub();
+	int GetDuree();
+
 private:
-	Joueur joueur;
-	Club nouvClub, ancClub;
+	Joueur *joueur;
+	Club *nouvClub, *ancClub;
 	Reglement reglement;
 	int duree;
 	Date dateEntree, dateContrat;

@@ -210,7 +210,29 @@ void Screen::SuppRencontre()
 
 void Screen::CreateContrat()
 {
+	int choix;
 
+	if (vecteur_club.size() <= 0)
+	{
+		cout << "Il n'y a pas de club dans la ligue" << endl;
+		return;
+	}
+
+	cout << "Choisissez le club dont vous voulez creer un contrat:" << endl;
+	for (int i = 0; i < vecteur_club.size(); i++)
+	{
+		cout << i << ") " << vecteur_club.at(i)->GetNom() << endl;
+	}
+	cin >> choix;
+
+	Contrat* contrat = new Contrat;
+	contrat->SetJoueur();
+	contrat->SetNouvClub();
+	contrat->SetAncClub();
+	contrat->SetReglement();
+	contrat->SetDateEntree();
+	contrat->SetDateContrat();
+	vecteur_club.at(choix)->GetContrat().push_back(contrat);
 }
 
 void Screen::InitMainMenu()
@@ -229,6 +251,7 @@ void Screen::InitMainMenu()
 	cout << "8)  Creer une rencontre" << endl;
 	cout << "9)  Afficher le calendrier des rencontres" << endl;
 	cout << "10) Supprimer une rencontre du calendrier" << endl;
+	cout << "11) Creer un contrat" << endl;
 
 	cin >> choix;
 	cout << endl << endl;

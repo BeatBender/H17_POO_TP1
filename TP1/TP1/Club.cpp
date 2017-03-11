@@ -168,6 +168,11 @@ void Club::AfficherJoueurs()
 	}
 }
 
+vector<Contrat*> Club::GetContrat()
+{
+	return this->contrats;
+}
+
 
 Club::Club()
 {

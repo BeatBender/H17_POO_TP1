@@ -1,6 +1,4 @@
-﻿  TitreGagne.cpp
-  Staff.cpp
-  Screen.cpp
+﻿  Screen.cpp
 d:\users\patrickbeatbender\documents\github\h17_poo_tp1\tp1\tp1\screen.cpp(43): warning C4018: '<' : incompatibilité signed/unsigned
 d:\users\patrickbeatbender\documents\github\h17_poo_tp1\tp1\tp1\screen.cpp(61): warning C4018: '<' : incompatibilité signed/unsigned
 d:\users\patrickbeatbender\documents\github\h17_poo_tp1\tp1\tp1\screen.cpp(75): warning C4018: '<' : incompatibilité signed/unsigned
@@ -10,20 +8,6 @@ d:\users\patrickbeatbender\documents\github\h17_poo_tp1\tp1\tp1\screen.cpp(113):
 d:\users\patrickbeatbender\documents\github\h17_poo_tp1\tp1\tp1\screen.cpp(141): warning C4018: '<' : incompatibilité signed/unsigned
 d:\users\patrickbeatbender\documents\github\h17_poo_tp1\tp1\tp1\screen.cpp(182): warning C4018: '<' : incompatibilité signed/unsigned
 d:\users\patrickbeatbender\documents\github\h17_poo_tp1\tp1\tp1\screen.cpp(201): warning C4018: '<' : incompatibilité signed/unsigned
-  Rupture.cpp
-  Rencontre.cpp
-  Personne.cpp
-  Parcours.cpp
-  Match.cpp
-  LigueSoccerApp.cpp
-  JoueurNA.cpp
-  JoueurA.cpp
-  Joueur.cpp
-  Equipe.cpp
-  Entraineur.cpp
-  Contrat.cpp
-  Club.cpp
-d:\users\patrickbeatbender\documents\github\h17_poo_tp1\tp1\tp1\club.cpp(165): warning C4018: '<' : incompatibilité signed/unsigned
-  Génération de code en cours...
+d:\users\patrickbeatbender\documents\github\h17_poo_tp1\tp1\tp1\screen.cpp(222): warning C4018: '<' : incompatibilité signed/unsigned
   TP1.vcxproj -> D:\Users\PatrickBeatBender\Documents\GitHub\H17_POO_TP1\TP1\Debug\TP1.exe
   TP1.vcxproj -> D:\Users\PatrickBeatBender\Documents\GitHub\H17_POO_TP1\TP1\Debug\TP1.pdb (Partial PDB)

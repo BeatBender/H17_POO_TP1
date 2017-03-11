@@ -11,11 +11,13 @@
 #include "Stade.h"
 #include "Personne.h"
 #include "Entraineur.h"
+#include "Contrat.h"
 
 using namespace std;
 class Joueur;
 class Personne;
 class Entraineur;
+class Contrat;
 
 class Club
 {
@@ -35,6 +37,7 @@ public:
 	vector<Entraineur*> GetEntraineurs();
 	Stade GetStade();
 	vector<Personne> GetStaff();
+	vector<Contrat*> GetContrat();
 
 	//Set
 	void SetNom();
@@ -59,6 +62,7 @@ private:
 	vector<string> titres;
 	Stade stade;
 	vector<Personne*> staff;
+	vector<Contrat*> contrats;
 };
 
 #endif

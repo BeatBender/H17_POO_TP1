@@ -16,25 +16,29 @@ Contrat::~Contrat()
 void Contrat::SetJoueur()
 {
 	cout << "Joueur contractant: " << endl;
-	this->joueur.SetPrenom();
-	this->joueur.SetNom();
+	this->joueur->SetPrenom();
+	this->joueur->SetNom();
 }
 
 void Contrat::SetNouvClub()
 {
 	cout << "Nouveau club du joueur:" << endl;
-	this->nouvClub.SetNom();
+	this->nouvClub->SetNom();
 }
 
 void Contrat::SetAncClub()
 {
 	cout << "Ancien club du joueur:" << endl;
-	this->ancClub.SetNom();
+	this->ancClub->SetNom();
 }
 
 void Contrat::SetReglement()
 {
-	
+	this->reglement.SetMonstantSeuil();
+	this->reglement.SetDroits();
+	this->reglement.SetMontantTransfert();
+	this->reglement.SetMontantClub();
+	this->reglement.SetMontantJoueur();
 }
 
 void Contrat::SetDateEntree()
@@ -63,4 +67,24 @@ void Contrat::SetDateContrat()
 	cout << "Entrez l'annee de signature du contrat: " << endl;
 	cin >> annee;
 	this->dateEntree.SetAnnee(annee);
+}
+
+string Contrat::GetJoueur()
+{
+	return this->joueur->GetPrenom() + " " + this->joueur->GetNom();
+}
+
+string Contrat::GetNouvClub()
+{
+	return this->nouvClub->GetNom();
+}
+
+string Contrat::GetAncClub()
+{
+	return this->ancClub->GetNom();
+}
+
+int Contrat::GetDuree()
+{
+	return this->duree;
 }
