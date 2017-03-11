@@ -27,3 +27,13 @@ void Resultat::SetNbButsTotalInvite()
 	cin >> nb;
 	this->nbButsTotalInvite = nb;
 }
+
+int Resultat::GetNbButsTotalLocal()
+{
+	return this->nbButsTotalLocal;
+}
+
+int Resultat::GetNbButsTotalInvite()
+{
+	return this->nbButsTotalInvite;
+}

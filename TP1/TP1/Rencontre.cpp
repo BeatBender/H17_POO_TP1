@@ -69,7 +69,7 @@ string Rencontre::GetClubInvite()
 	return this->clubInvite.GetNom();
 }
 
-int Rencontre::GetResultatLocal()
+string Rencontre::GetResultat()
 {
-	return this->resultat.
+	return this->resultat.GetResultat();
 }

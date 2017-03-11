@@ -59,7 +59,6 @@ private:
 	vector<string> titres;
 	Stade stade;
 	vector<Personne*> staff;
-
 };
 
 #endif

@@ -20,6 +20,8 @@ public:
 	void RechercheClubTitre();
 	void CreateGame();
 	void AfficherCalendrier();
+	void SuppRencontre();
+	void CreateContrat();
 
 private:
 

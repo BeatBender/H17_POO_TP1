@@ -21,8 +21,7 @@ public:
 	string GetAnnee();
 	string GetClubLocal();
 	string GetClubInvite();
-	int GetResultatLocal();
-	int GetResultatInvite();
+	string GetResultat();
 
 private:
 	Date dateRencontre;

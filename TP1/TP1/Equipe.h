@@ -14,6 +14,11 @@ public:
 	void SetNbGardiens();
 	void SetCapitaine();
 
+	string GetClub();
+	int GetNbJoueursTerrain();
+	int GetNbGardiens();
+	string GetCapitaine();
+
 private:
 	Club club;
 	int nbJoueursTerrain, nbGardiens;

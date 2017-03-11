@@ -11,6 +11,9 @@ public:
 	void SetNbButsTotalLocal();
 	void SetNbButsTotalInvite();
 
+	int GetNbButsTotalLocal();
+	int GetNbButsTotalInvite();
+
 private:
 	int nbButsTotalLocal, nbButsTotalInvite;
 };

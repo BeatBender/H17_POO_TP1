@@ -38,3 +38,23 @@ void Equipe::SetCapitaine()
 {
 	this->capitaine.SetNom();
 }
+
+string Equipe::GetClub()
+{
+	return this->club.GetNom();
+}
+
+int Equipe::GetNbJoueursTerrain()
+{
+	return this->nbJoueursTerrain;
+}
+
+int Equipe::GetNbGardiens()
+{
+	return this->nbGardiens;
+}
+
+string Equipe::GetCapitaine()
+{
+	return this->capitaine.GetNom();
+}

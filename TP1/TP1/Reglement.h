@@ -11,6 +11,12 @@ public:
 	Reglement();
 	~Reglement();
 
+	void SetMonstantSeuil();
+	void SetDroits();
+	void SetMontantTransfert();
+	void SetMontantClub();
+	void SetMontantJoueur();
+
 private:
 	int montantSeuil;
 	string droits;

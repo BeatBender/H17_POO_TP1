@@ -49,6 +49,12 @@ void Screen::AfficherClubs()
 
 void Screen::SuppClub()
 {
+	if (vecteur_club.size() <= 0)
+	{
+		cout << "Il n'y a pas de club dans la ligue" << endl;
+		return;
+	}
+
 	int choix;
 
 	cout << "Choisissez le club que vous voulez supprimer:" << endl;
@@ -166,29 +172,63 @@ void Screen::CreateGame()
 
 void Screen::AfficherCalendrier()
 {
+	if (vecteur_rencontres.size() <= 0)
+	{
+		cout << "Il n'y a pas de rencontre au calendrier" << endl;
+		return;
+	}
+
 	cout << "Voici la liste des rencontres:" << endl;
 	for (int i = 0; i < vecteur_rencontres.size(); i++)
 	{
-		cout << vecteur_rencontres.at(i)->
+		cout << vecteur_rencontres.at(i)->GetJour() + "/" + vecteur_rencontres.at(i)->GetMois() + "/" + vecteur_rencontres.at(i)->GetAnnee() + ": ";
+		cout << vecteur_rencontres.at(i)->GetClubLocal() + " vs. " + vecteur_rencontres.at(i)->GetClubInvite() + " -- ";
+		cout << vecteur_rencontres.at(i)->GetResultat() << endl << endl;
 	}
+}
+
+void Screen::SuppRencontre()
+{
+	if (vecteur_rencontres.size() <= 0)
+	{
+		cout << "Il n'y a pas de rencontre au calendrier" << endl;
+		return;
+	}
+
+	int choix;
+
+	cout << "Choisissez la rencontre que vous voulez supprimer:" << endl;
+	for (int i = 0; i < vecteur_rencontres.size(); i++)
+	{
+		cout << i << ") " << vecteur_rencontres.at(i)->GetClubLocal() + " vs " + vecteur_rencontres.at(i)->GetClubInvite() << endl;
+	}
+
+	cin >> choix;
+
+	vecteur_rencontres.erase(vecteur_rencontres.begin() + choix);
+}
+
+void Screen::CreateContrat()
+{
+
 }
 
 void Screen::InitMainMenu()
 {
-
 	int choix;
 
 	cout << "--------------------- Menu Principal -----------------------" << endl;
-	cout << "0) Quitter l'application" << endl;
-	cout << "1) Ajouter un club" << endl;
-	cout << "2) Afficher les clubs existant" << endl;
-	cout << "3) Supprimer un club" << endl;
-	cout << "4) Afficher les joueurs d'un club" << endl;
-	cout << "5) Ajouter un joueur a un club" << endl;
-	cout << "6) Trouver l'entraineur le plus titre de la ligue" << endl;
-	cout << "7) Trouver le club le plus titre de la ligue" << endl;
-	cout << "8) Creer une rencontre" << endl;
-	cout << "9) Afficher le calendrier des rencontres" << endl;
+	cout << "0)  Quitter l'application" << endl;
+	cout << "1)  Ajouter un club" << endl;
+	cout << "2)  Afficher les clubs existant" << endl;
+	cout << "3)  Supprimer un club" << endl;
+	cout << "4)  Afficher les joueurs d'un club" << endl;
+	cout << "5)  Ajouter un joueur a un club" << endl;
+	cout << "6)  Trouver l'entraineur le plus titre de la ligue" << endl;
+	cout << "7)  Trouver le club le plus titre de la ligue" << endl;
+	cout << "8)  Creer une rencontre" << endl;
+	cout << "9)  Afficher le calendrier des rencontres" << endl;
+	cout << "10) Supprimer une rencontre du calendrier" << endl;
 
 	cin >> choix;
 	cout << endl << endl;
@@ -244,12 +284,20 @@ void Screen::InitMainMenu()
 		InitMainMenu();
 		break;
 
+	case 10:
+		SuppRencontre();
+		InitMainMenu();
+		break;
+
+	case 11:
+		CreateContrat();
+		InitMainMenu();
+		break;
+
 	default:
 		cout << endl << "Commande invalide" << endl;
 		InitMainMenu();
 		break;
 	}
-
-
 	return;
 }

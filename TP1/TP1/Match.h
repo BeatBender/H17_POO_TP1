@@ -17,6 +17,11 @@ public:
 	void SetPeriode();
 	void SetResultat();
 
+	string GetEquipeLocal();
+	string GetEquipeInvite();
+	list <Periode*> GetPeriodes();
+	string GetResultat();
+
 private:
 	Equipe equipeLocal, equipeInvite;
 	list <Periode*> periodes;
