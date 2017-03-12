@@ -110,6 +110,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Arbitre.h" />
     <ClInclude Include="Club.h" />
     <ClInclude Include="Contrat.h" />
     <ClInclude Include="Date.h" />
@@ -136,6 +137,7 @@
     <ClInclude Include="TitresGagne.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Arbitre.cpp" />
     <ClCompile Include="Club.cpp" />
     <ClCompile Include="Contrat.cpp" />
     <ClCompile Include="Date.cpp" />

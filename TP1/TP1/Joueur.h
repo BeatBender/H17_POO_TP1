@@ -7,6 +7,7 @@
 #include "Club.h"
 
 class Parcours;
+class Rupture;
 using namespace std;
 
 class Joueur
@@ -21,6 +22,7 @@ public:
 	void SetTaille();
 	void SetPoids();
 	void SetParcours();
+	void SetRupture();
 
 	string GetNom();
 	string GetPrenom();
@@ -29,5 +31,6 @@ private:
 	string nom, prenom, ville_naissance;
 	float taille, poids;
 	Parcours *parcours;
+	Rupture *rupture;
 };
 #endif

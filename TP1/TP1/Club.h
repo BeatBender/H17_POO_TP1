@@ -52,6 +52,8 @@ public:
 
 	void AfficherJoueurs();
 
+	void AddContrat(Contrat*);
+
 
 private:
 	string nom, histoire, couleur, ville;

@@ -15,10 +15,31 @@ Contrat::~Contrat()
 
 void Contrat::SetJoueur()
 {
+	bool ok;
+	cout << "Est-ce que le joueur brise un contrat pour rejoindre ce club? (0.Non , 1:Oui)" << endl;
+	cin >> ok;
+	if (ok)
+	{
+		SetJoueurRupture();
+	}
+	else 
+	{
+		Joueur *joueurcourant = new Joueur;
+		cout << "Joueur contractant: " << endl;
+		joueurcourant->SetPrenom();
+		joueurcourant->SetNom();
+		this->joueur = joueurcourant;
+	}
+	
+}
+
+void Contrat::SetJoueurRupture()
+{
 	Joueur *joueurcourant = new Joueur;
 	cout << "Joueur contractant: " << endl;
 	joueurcourant->SetPrenom();
 	joueurcourant->SetNom();
+	joueurcourant->SetRupture();
 	this->joueur = joueurcourant;
 }
 
@@ -66,13 +87,19 @@ void Contrat::SetDateContrat()
 	string jour, mois, annee;
 	cout << "Entrez le jour de signature du contrat: " << endl;
 	cin >> jour;
-	this->dateEntree.SetJour(jour);
+	this->dateContrat.SetJour(jour);
 	cout << "Entrez le mois de signature du contrat: " << endl;
 	cin >> mois;
-	this->dateEntree.SetMois(mois);
+	this->dateContrat.SetMois(mois);
 	cout << "Entrez l'annee de signature du contrat: " << endl;
 	cin >> annee;
-	this->dateEntree.SetAnnee(annee);
+	this->dateContrat.SetAnnee(annee);
+}
+
+void Contrat::SetDuree()
+{
+	cout << "Entrez une duree de contrat: " << endl;
+	cin >> this->duree;
 }
 
 string Contrat::GetJoueur()

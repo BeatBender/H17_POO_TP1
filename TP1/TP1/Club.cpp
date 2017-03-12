@@ -173,6 +173,11 @@ vector<Contrat*> Club::GetContrat()
 	return this->contrats;
 }
 
+void Club::AddContrat(Contrat* _C)
+{
+	contrats.push_back(_C);
+}
+
 
 Club::Club()
 {

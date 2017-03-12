@@ -23,7 +23,8 @@ public:
 	void SuppRencontre();
 	void CreateContrat();
 	void AfficherMontantClub();
-
+	void AfficherScore();
+	
 private:
 
 };

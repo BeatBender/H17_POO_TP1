@@ -1,4 +1,5 @@
 #include "Joueur.h"
+#include "Rupture.h"
 #include <iostream>
 
 using namespace std;
@@ -63,6 +64,18 @@ void Joueur::SetParcours()
 	Parcours* parcours_joueur = new Parcours;
 	parcours_joueur->SetParcours();
 	this->parcours = parcours_joueur;
+}
+
+void Joueur::SetRupture()
+{
+	Rupture *rupture = new Rupture;
+
+	rupture->SetJoueur();
+	rupture->SetNouvClub();
+	rupture->SetPenalite();
+	rupture->SetRaison();
+	this->rupture = rupture;
+
 }
 
 string Joueur::GetNom()

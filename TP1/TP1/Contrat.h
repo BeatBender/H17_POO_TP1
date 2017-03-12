@@ -13,11 +13,13 @@ public:
 	~Contrat();
 
 	void SetJoueur();
+	void SetJoueurRupture();
 	void SetNouvClub();
 	void SetAncClub();
 	void SetReglement();
 	void SetDateEntree();
 	void SetDateContrat();
+	void SetDuree();
 
 	string GetJoueurContractant();
 	string GetJoueur();
