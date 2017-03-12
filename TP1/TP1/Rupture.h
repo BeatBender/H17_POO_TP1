@@ -12,6 +12,16 @@ public:
 	Rupture();
 	~Rupture();
 
+	void SetJoueur();
+	void SetRaison();
+	void SetNouvClub();
+	void SetPenalite();
+
+	string GetJoueur();
+	string GetRaison();
+	string GetNouvClub();
+	float GetPenalite();
+
 private:
 	Joueur joueur;
 	string raison;

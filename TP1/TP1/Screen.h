@@ -22,6 +22,7 @@ public:
 	void AfficherCalendrier();
 	void SuppRencontre();
 	void CreateContrat();
+	void AfficherMontantClub();
 
 private:
 

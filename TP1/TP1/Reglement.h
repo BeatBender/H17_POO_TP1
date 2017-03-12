@@ -17,6 +17,8 @@ public:
 	void SetMontantClub();
 	void SetMontantJoueur();
 
+	float GetMontantClub();
+
 private:
 	int montantSeuil;
 	string droits;

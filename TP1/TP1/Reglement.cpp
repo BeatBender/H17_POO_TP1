@@ -42,3 +42,8 @@ void Reglement::SetMontantJoueur()
 	cout << "Entrez le montant restant encaissé par le joueur:" << endl;
 	cin >> this->montantJoueur;
 }
+
+float Reglement::GetMontantClub()
+{
+	return this->montantClub;
+}

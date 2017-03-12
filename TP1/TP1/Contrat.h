@@ -19,10 +19,13 @@ public:
 	void SetDateEntree();
 	void SetDateContrat();
 
+	string GetJoueurContractant();
 	string GetJoueur();
-	string GetNouvClub();
+	Club* GetNouvClub();
 	string GetAncClub();
 	int GetDuree();
+	string GetDateContrat();
+	Reglement GetReglement();
 
 private:
 	Joueur *joueur;

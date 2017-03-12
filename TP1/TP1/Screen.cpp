@@ -233,6 +233,29 @@ void Screen::CreateContrat()
 	contrat->SetDateEntree();
 	contrat->SetDateContrat();
 	vecteur_club.at(choix)->GetContrat().push_back(contrat);
+	system("Pause");
+}
+
+void Screen::AfficherMontantClub()
+{
+	int choix, choix2;
+
+	cout << "Choisissez un club pour voir ses transactions:" << endl;
+	for (int i = 0; i < vecteur_club.size(); i++)
+	{
+		cout << i << ") " << vecteur_club.at(i)->GetNom() << endl;
+	}
+	cin >> choix;
+
+	cout << "Choisissez une date pour voir le montant encaisse par le club:" << endl;
+	for (int i = 0; i < vecteur_club.at(choix)->GetContrat().size(); i++)
+	{
+		cout << i + ") " + vecteur_club.at(choix)->GetContrat().at(i)->GetDateContrat();
+	}
+	cin >> choix2;
+
+	cout << "Le montant encaisse par le club a cette date est: " << vecteur_club.at(choix)->GetContrat().at(choix2)->GetReglement().GetMontantClub() << endl;
+	system("PAUSE");
 }
 
 void Screen::InitMainMenu()
@@ -240,7 +263,7 @@ void Screen::InitMainMenu()
 	int choix;
 
 	cout << "--------------------- Menu Principal -----------------------" << endl;
-	cout << "0)  Quitter l'application" << endl;
+	cout << "0)  Quitter l'application" << endl << endl;
 	cout << "1)  Ajouter un club" << endl;
 	cout << "2)  Afficher les clubs existant" << endl;
 	cout << "3)  Supprimer un club" << endl;
@@ -252,6 +275,7 @@ void Screen::InitMainMenu()
 	cout << "9)  Afficher le calendrier des rencontres" << endl;
 	cout << "10) Supprimer une rencontre du calendrier" << endl;
 	cout << "11) Creer un contrat" << endl;
+	cout << "12) Afficher les montants de transfert encaisses par club par date" << endl;
 
 	cin >> choix;
 	cout << endl << endl;
@@ -314,6 +338,11 @@ void Screen::InitMainMenu()
 
 	case 11:
 		CreateContrat();
+		InitMainMenu();
+		break;
+
+	case 12:
+		AfficherMontantClub();
 		InitMainMenu();
 		break;
 

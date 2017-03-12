@@ -15,21 +15,27 @@ Contrat::~Contrat()
 
 void Contrat::SetJoueur()
 {
+	Joueur *joueurcourant = new Joueur;
 	cout << "Joueur contractant: " << endl;
-	this->joueur->SetPrenom();
-	this->joueur->SetNom();
+	joueurcourant->SetPrenom();
+	joueurcourant->SetNom();
+	this->joueur = joueurcourant;
 }
 
 void Contrat::SetNouvClub()
 {
+	Club *clubcourant = new Club;
 	cout << "Nouveau club du joueur:" << endl;
-	this->nouvClub->SetNom();
+	clubcourant->SetNom();
+	this->nouvClub = clubcourant;
 }
 
 void Contrat::SetAncClub()
 {
+	Club *clubcourant = new Club;
 	cout << "Ancien club du joueur:" << endl;
-	this->ancClub->SetNom();
+	clubcourant->SetNom();
+	this->ancClub = clubcourant;
 }
 
 void Contrat::SetReglement()
@@ -74,9 +80,9 @@ string Contrat::GetJoueur()
 	return this->joueur->GetPrenom() + " " + this->joueur->GetNom();
 }
 
-string Contrat::GetNouvClub()
+Club* Contrat::GetNouvClub()
 {
-	return this->nouvClub->GetNom();
+	return this->nouvClub;
 }
 
 string Contrat::GetAncClub()
@@ -88,3 +94,28 @@ int Contrat::GetDuree()
 {
 	return this->duree;
 }
+
+string Contrat::GetDateContrat()
+{
+	return this->dateContrat.GetJour() + "/" + this->dateContrat.GetMois() + "/" + this->dateContrat.GetAnnee();
+}
+
+Reglement Contrat::GetReglement()
+{
+	return this->reglement;
+}
+
+/*string Contrat::GetJoueurContractant()
+{
+	int choix;
+
+	cout << "Choisissez le joueur contractant:" << endl;
+
+	for (int i = 0; i < nouvClub->GetEffectif().size(); i++)
+	{
+		cout << i + ") " + nouvClub->GetEffectif().at(i).GetPrenom() + nouvClub->GetEffectif().at(i).GetNom() << endl;
+	}
+
+	cin >> choix;
+	return nouvClub->GetEffectif().at(choix).GetPrenom() + " " + nouvClub->GetEffectif().at(choix).GetNom();
+}*/
